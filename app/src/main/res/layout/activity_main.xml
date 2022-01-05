@@ -6,29 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recViewChallenge"
-        android:layout_width="169dp"
-        android:layout_height="549dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:text="Utmaningar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewChallenge"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Problem"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/recViewProblem"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recViewProblem"
-        android:layout_width="251dp"
-        android:layout_height="547dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         app:layout_constraintStart_toEndOf="@+id/recViewChallenge"
         app:layout_constraintTop_toTopOf="@+id/recViewChallenge" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idéer"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/recViewIdea"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recViewIdea"
-        android:layout_width="251dp"
-        android:layout_height="547dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         app:layout_constraintStart_toEndOf="@+id/recViewProblem"
         app:layout_constraintTop_toTopOf="@+id/recViewProblem" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Koncept"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewConcept"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewConcept"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/recViewIdea"
+        app:layout_constraintTop_toTopOf="@+id/recViewIdea" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

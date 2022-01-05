@@ -1,8 +1,9 @@
 package com.aspegrenide.conceptboard.data;
 
-public class Idea {
+import java.util.ArrayList;
 
-    private String title;
+public class Idea extends Aspect{
+
     private String approach;
     private String benefit;
     private String contact;
@@ -16,6 +17,12 @@ public class Idea {
     public String toString() {
         return "Idea{" +
                 "title='" + title + '\'' +
+                ", uid='" + uid + '\'' +
+                ", type='" + type + '\'' +
+                ", linkedChallenges=" + linkedChallenges +
+                ", linkedProblems=" + linkedProblems +
+                ", linkedIdeas=" + linkedIdeas +
+                ", linkedConcepts=" + linkedConcepts +
                 ", approach='" + approach + '\'' +
                 ", benefit='" + benefit + '\'' +
                 ", contact='" + contact + '\'' +
@@ -30,6 +37,14 @@ public class Idea {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getApproach() {
@@ -71,4 +86,6 @@ public class Idea {
     public void setOpen(boolean open) {
         this.open = open;
     }
+
+
 }
